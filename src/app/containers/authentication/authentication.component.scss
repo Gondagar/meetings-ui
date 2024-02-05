@@ -1,0 +1,68 @@
+@import '../../../styles/bootstrap-utils';
+@import '../../../styles/variables';
+
+.mui-authentication {
+  min-height: 100vh;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &-link {
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  &__col {
+    &-left {
+      position: relative;
+      order: 2;
+      color: $white;
+      text-align: center;
+      background-color: $primary;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        order: 1;
+        transform: rotate(-20deg) translateX(-90%);
+        background-color: $primary-dark;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      &-left {
+        order: 1;
+      }
+
+      &-right {
+        order: 2;
+      }
+    }
+  }
+
+  &__col-right &__section {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  &__section {
+    position: relative;
+    padding: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__notebook {
+    max-width: 100%;
+  }
+}

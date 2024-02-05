@@ -1,0 +1,18 @@
+<div class="mui-input" [attr.invalid]="invalid">
+  <label class="mui-input__label" *ngIf="label">{{ label }}</label>
+  <div class="mui-input__container" [class.mui-input__container--invalid]="invalid">
+    <input 
+      class="mui-input__input form-control" 
+      [(ngModel)]="value" 
+      (ngModelChange)="onInput($event)" 
+      (blur)="onBlur()"
+      (focus)="markAsDirty()"
+      (touch)="markAsDirty()"
+      [attr.name]="name" 
+      [attr.id]="id"
+      [type]="type" 
+      [disabled]="disabled" 
+      [placeholder]="placeHolder" />
+  </div>
+  <mui-error-message *ngIf="showError" [show]="shouldShowError" [errors]="errors"></mui-error-message>
+</div>

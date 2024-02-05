@@ -1,0 +1,14 @@
+<div class="mui-input" [attr.invalid]="invalid">
+  <label class="mui-input__label" *ngIf="label">{{ label }}</label>
+  <div class="mui-input__container" [class.mui-input__container--invalid]="invalid">
+    <input 
+      class="form-control"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+      #dp="bsDatepicker"
+      bsDatepicker
+      (ngModelChange)="onInput($event)"
+      [(ngModel)]="value">
+  </div>
+  <mui-error-message *ngIf="showError" [show]="shouldShowError" [errors]="errors"></mui-error-message>
+</div>

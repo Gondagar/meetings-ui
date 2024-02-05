@@ -1,0 +1,12 @@
+<div class="mui-tabs__wrapper">
+  <ul class="mui-tabs__toggles">
+    <li (click)="activateTab(i)" class="mui-tabs__toggle" [class.mui-tabs__toggle-active]="isActive(i)" *ngFor="let tab of tabs; let i = index">
+      {{tab.label | translate}}
+    </li>
+  </ul>
+  <div class="mui-tabs">
+    <div class="mui-tab" [class.mui-tab-active]="isActive(i)" *ngFor="let tab of tabs; let i = index">
+      <ng-container [ngTemplateOutlet]="itemTemplate" [ngTemplateOutletContext]="{ $implicit: i }"></ng-container>
+    </div>
+  </div>
+</div>

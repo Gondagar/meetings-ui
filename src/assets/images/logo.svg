@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="143.333" height="80.186" viewBox="0 0 143.333 80.186">
+  <g id="logo" transform="translate(0.5)">
+    <g id="Component_1_1" data-name="Component 1 – 1" transform="translate(0 50.111)">
+      <path id="Path_5" data-name="Path 5" d="M26.964-5.381C17.641-5.588,6.039-2.066,6.039,4.564s12.327,11.654,41.85,16.16S119.961,21,119.961,21" transform="translate(-6.039 5.389)" fill="none" stroke="#000" stroke-width="1"/>
+      <line id="Line_1" data-name="Line 1" x2="5" y2="3" transform="translate(108.961 23.389)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_2" data-name="Line 2" y1="3" x2="5" transform="translate(108.961 26.389)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+    </g>
+    <g id="Component_1_2" data-name="Component 1 – 2" transform="translate(142.332 75.602) rotate(180)">
+      <path id="Path_5-2" data-name="Path 5" d="M33.856-2.488C25.154-.831,10.865,4.09,11.066,9.942c.414,4.972,8.909,13.259,37.913,15.132s72.043,0,72.043,0" transform="translate(-11.064 2.488)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_1-2" data-name="Line 1" x2="5" y2="3" transform="translate(104.936 24.488)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_2-2" data-name="Line 2" y1="3" x2="5" transform="translate(104.936 27.488)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+    </g>
+    <g id="iconfinder_target_group_group_People_Friends_Group_Conversation_Team_Community_4265044" transform="translate(5.461 -28.06)">
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="12.98" cy="12.98" r="12.98" transform="translate(89.02 40.04)" fill="#0046c2"/>
+      <ellipse id="Ellipse_5" data-name="Ellipse 5" cx="14.127" cy="12.98" rx="14.127" ry="12.98" transform="translate(10.766 40.04)" fill="#0046c2"/>
+      <path id="Path_1" data-name="Path 1" d="M33.074,77.144c-2.9,5.387-4.558,25.276,8.909,26.1s25.483,1.45,43.093,1.036S97.92,81.7,96.056,77.144s-8.08-9.53-10.98-10.566S75.741,64.1,64.05,64.1c-6.593,0-16.266.824-20.2,2.482S35.975,71.757,33.074,77.144Z" fill="#0046c2"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="17.97" cy="17.97" r="17.97" transform="translate(46.03 28.06)" fill="#0046c2"/>
+      <path id="Path_3" data-name="Path 3" d="M102,66a26,26,0,0,0-8.46,1.42c7.142,6.47,4.795,24.019,13.289,24.226s10.773,0,14.917-1.865S116.359,66,102,66Z" fill="#0046c2"/>
+      <path id="Path_7" data-name="Path 7" d="M114.19,66a25.83,25.83,0,0,1,8.431,1.42c-7.117,6.47-4.778,24.019-13.244,24.226s-10.736,0-14.865-1.865S99.88,66,114.19,66Z" transform="translate(-88.52 0)" fill="#0046c2"/>
+    </g>
+  </g>
+</svg>

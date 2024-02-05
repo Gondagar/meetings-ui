@@ -1,0 +1,11 @@
+<div class="mui-input" [attr.invalid]="invalid">
+  <label class="mui-input__label" *ngIf="label">{{ label }}</label>
+  <div class="mui-input__container" [class.mui-input__container--invalid]="invalid">
+    <timepicker
+      [showMeridian]="false"
+      (ngModelChange)="onInput($event)"
+      [(ngModel)]="value"
+    ></timepicker>
+  </div>
+  <mui-error-message *ngIf="showError" [show]="shouldShowError" [errors]="errors"></mui-error-message>
+</div>

@@ -1,0 +1,55 @@
+@import '../../../../../styles/variables';
+
+.meeting {
+  &__caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__date-time {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__note {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid $primary;
+
+    &-caption {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-content {
+      margin-top: 10px;
+    }
+  }
+
+  &__note-form {
+    display: flex;
+    flex-direction: column;;
+
+    &-button {
+      margin: 10px auto;
+    }
+  }
+
+  &__participants {
+    &-item {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      
+      span {
+        margin-left: 10px;
+      }
+
+      button {
+        margin-left: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import '../../../styles/variables';
+
+.mui-user-details {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: rgba($white, 0.3);
+  color: $white;
+  border-bottom: 2px solid rgba($white, 0.5);
+  border-top: 2px solid rgba($white, 0.5);
+
+  &__content {
+    margin-left: 10px;
+
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+$breakpoints: ( 
+  xs: 576px, 
+  sm: 768px, 
+  md: 992px, 
+  lg: 1200px 
+);
+$black: #000000;
+$white: #fff;
+$white-darken: #f7faff;
+
+$font-weight-base: normal;
+
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #9e9e9e;
+$gray-500: #adb5bd;
+$gray-600: #6c6c6f;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #222222;
+
+$primary-light: #48b1ea;
+$primary-dark: #0a3175;
+$color-blue-300: #0e439e;
+$color-blue-500: #0a3175;
+
+$primary: #256be6;
+$secondary: #c80b5a;
+$info: #0d50c3;
+$danger: #e60000;
+$warning: #d1ce00;
+$success: #05a11f;
+$light: #f7faff;
+$dark: $primary-dark;
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+);
+  
+
+$color-default: $gray-900;
+$link-color: $color-default;
+
+$border-radius-base: 10px;
+
+// links
+$link-hover-color: $primary;
+$link-hover-decoration: none;
+
+// input
+$input-border: #dadada;
+$input-border-radius: $border-radius-base;
+$input-padding-y: 0.75rem;
+$input-padding-x: 1.25rem;
+$input-height: 50px;
+$input-font-weight: normal;
+
+//button
+$btn-padding-y: 0.75rem; 
+$btn-padding-x: 1.25rem;
+$btn-font-size: 1rem;
+$btn-line-height: 1.5rem;
+$btn-border-radius: $border-radius-base;
+$btn-font-weight: bold;
+$btn-focus-box-shadow: none;
+
+$min-button-width: 150px;
+
+// card
+$card-border-radius: 10px;
+$card-cap-bg: $primary;
+$card-cap-color: $white;
+
+// dashboard
+$dashboard-caption-dash-width: 6px; 
+
+// table
+$table-cell-padding-vertical: 15px;
+$table-cell-padding-horizontal: 20px;

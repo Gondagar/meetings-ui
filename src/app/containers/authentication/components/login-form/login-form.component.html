@@ -1,0 +1,26 @@
+<h1>{{'LOGIN_PAGE.TITLE' | translate}}</h1>
+<form [formGroup]="form" class="mui-authentication-form" (submit)="handleSubmit()">
+  <mui-input [label]="'LOGIN_PAGE.EMAIL_LABEL' | translate"
+            [placeHolder]="'LOGIN_PAGE.EMAIL_PLACEHOLDER' | translate"
+            id="authentication-email"
+            name="email"
+            formControlName="email"
+            [showError]="true"
+            [invalid]="invalidControl('email')"
+            [errors]="form.get('email').errors"
+  ></mui-input>
+  <mui-input [label]="'LOGIN_PAGE.PASSWORD_LABEL' | translate"
+            [placeHolder]="'LOGIN_PAGE.PASSWORD_PLACEHOLDER' | translate"
+            id="authentication-password"
+            name="password"
+            type="password"
+            formControlName="password"
+            [showError]="true"
+            [invalid]="invalidControl('password')"
+            [errors]="form.get('password').errors"
+  ></mui-input>
+  <p>{{'LOGIN_PAGE.SIGNED_UP.MESSAGE' | translate}} <a [routerLink]="registrationFormLink">{{'LOGIN_PAGE.SIGNED_UP.LINK' | translate}}</a></p>
+  <div class="mui-authentication-form__footer">
+    <button [disabled]="formInvalid" class="btn btn-primary mui-btn mui-authentication-form__button" type="submit">{{'LOGIN_PAGE.SUBMIT' | translate}}</button>
+  </div>
+</form>

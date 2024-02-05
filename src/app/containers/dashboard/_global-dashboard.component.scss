@@ -1,0 +1,33 @@
+.mui-dashboard {
+  min-height: 100vh;
+  min-width: 100vw;
+
+  .mui-sidebar {
+    &__link {
+      .mui-icon {
+        fill: $white;
+      }
+    }
+  }
+
+  &__section-caption {
+    position: relative;
+    background-color: $white-darken;
+    padding: 15px 20px;
+    border: 1px solid rgba($primary-dark, 0.2);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $dashboard-caption-dash-width;
+      height: 100%;
+      background-color: $primary-dark;
+    }
+  }
+
+  .bs-timepicker-field {
+    width: 75px;
+  }
+}

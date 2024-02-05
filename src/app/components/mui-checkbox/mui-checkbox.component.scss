@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+
+$checkbox-dimension: 18px;
+
+.mui-checkbox {
+  &__wrapper {
+    position: relative;
+    width: $checkbox-dimension;
+    height: $checkbox-dimension;
+    margin: 0;
+    border: 1px solid $input-border;
+    border-radius: 4px;
+  }
+
+  &__label {
+    display: flex;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  &__text {
+    margin: 0 0 0 10px;
+    line-height: $checkbox-dimension;
+    user-select: none;
+  }
+  
+  &__input {
+    display: none;
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $checkbox-dimension;
+    height: $checkbox-dimension;
+    background-image: url('/assets/images/icons/checkmark.svg');
+    background-size: contain;
+    background-position: center;
+    opacity: 0;
+  }
+
+  &__input:checked + &__checkmark {
+    opacity: 1;
+  }
+}

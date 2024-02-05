@@ -1,0 +1,12 @@
+<aside class="mui-sidebar" [ngClass]="{'mui-sidebar--open': isOpen}">
+  <button class="mui-sidebar__toggle" (click)="toggle()"></button>
+  <mui-user-details [user]="user | async"></mui-user-details>
+  <ul class="mui-sidebar__list">
+    <li class="mui-sidebar__list-item" *ngFor="let item of sidebarItems">
+      <a class="mui-sidebar__link" [routerLink]="[item.path]" routerLinkActive="router-link-active" >
+        <mui-icon class="mui-sidebar__link-icon" [settings]="iconSettings" [icon]="item.icon"></mui-icon>
+        <span class="mui-sidebar__link-text">{{item.title | translate}}</span>
+      </a>
+    </li>
+  </ul>
+</aside>

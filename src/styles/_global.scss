@@ -1,0 +1,36 @@
+body {
+  min-height: 100vh;
+  min-width: 450px;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Rubik';
+  color: $color-default;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: $color-default;
+  font-weight: bold;
+
+  &, &:hover {
+    text-decoration: none;
+  }
+}
+
+.mui-branding {
+  &-logo {
+    width: 150px;
+  }
+}
+
+.fc-widget-content {
+  .fc-day-grid-event {
+    margin: 5px 0;
+  }
+}

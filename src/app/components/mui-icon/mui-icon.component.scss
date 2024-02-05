@@ -1,0 +1,14 @@
+@import '../../../styles/variables.scss';
+
+.mui-icon-blocked {
+  fill: $danger;
+}
+
+.mui-icon-active {
+  fill: none;
+  stroke: $success;
+}
+
+.mui-icon-created {
+  fill: $primary;
+}

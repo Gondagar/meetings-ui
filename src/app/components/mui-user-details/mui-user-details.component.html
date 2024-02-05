@@ -1,0 +1,24 @@
+<div class="mui-user-details" *ngIf="user">
+  <button class="btn-transparent" (click)="openAvatarModal()">
+    <mui-avatar [data]="user.avatar"></mui-avatar>
+  </button>
+  <div class="mui-user-details__content">
+    <p class="mui-user-details__first-name">{{user.firstName}}</p>
+    <p class="mui-user-details__last-name">{{user.lastName}}</p>
+  </div>
+</div>
+<mui-modal [isOpen]="avatarModalVisible">
+  <form [formGroup]="avatarForm">
+    <mui-file-upload 
+      [label]="'AVATAR_FORM.LABEL' | translate"
+      id="user-avatar-input"
+      name="avatar"
+      formControlName="avatar"
+      [showError]="true"
+      [invalid]="invalidControl('avatar')"
+      [errors]="avatarForm.get('avatar').errors"
+    ></mui-file-upload>
+    <button [disabled]="!isValid" class="btn btn-primary" (click)="saveAvatar()">Submit</button>
+    <button class="btn btn-primary ml-2" (click)="closeModal()" type="button">Close</button>
+  </form>
+</mui-modal>

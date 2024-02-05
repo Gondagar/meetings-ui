@@ -1,0 +1,77 @@
+<div class="meeting-form__container">
+  <h1>Create a new meeting</h1>
+  <form [formGroup]="form" class="login-form form">
+    <mui-input [label]="'MEETING_FORM.TITLE_LABEL' | translate"
+      [placeHolder]="'MEETING_FORM.TITLE_PLACEHOLDER' | translate"
+      id="meeting-title"
+      name="title"
+      formControlName="title"
+      [showError]="true"
+      [invalid]="invalidControl('title')"
+      [errors]="form.get('title').errors"
+    ></mui-input>
+    <mui-input [label]="'MEETING_FORM.DESCRIPTION_LABEL' | translate"
+      [placeHolder]="'MEETING_FORM.DESCRIPTION_PLACEHOLDER' | translate"
+      id="meeting-description"
+      name="description"
+      formControlName="description"
+      [showError]="true"
+      [invalid]="invalidControl('description')"
+      [errors]="form.get('description').errors"
+    ></mui-input>
+    <mui-input [label]="'MEETING_FORM.DURATION_LABEL' | translate"
+      [placeHolder]="'MEETING_FORM.DURATION_PLACEHOLDER' | translate"
+      id="meeting-duration"
+      name="duration"
+      formControlName="duration"
+      [showError]="true"
+      [invalid]="invalidControl('duration')"
+      [errors]="form.get('duration').errors"
+    ></mui-input>
+    <div class="row">
+      <div class="col-md-6">
+        <mui-timepicker [label]="'MEETING_FORM.START_TIME_LABEL' | translate"
+          [placeHolder]="'MEETING_FORM.START_TIME_PLACEHOLDER' | translate"
+          id="meeting-start-time"
+          name="startTime"
+          formControlName="startTime"
+          [showError]="true"
+          [invalid]="invalidControl('startTime')"
+          [errors]="form.get('startTime').errors"
+        ></mui-timepicker>
+      </div>
+      <div class="col-md-6">
+        <mui-datepicker [label]="'MEETING_FORM.START_DATE_LABEL' | translate"
+          [placeHolder]="'MEETING_FORM.START_DATE_PLACEHOLDER' | translate"
+          id="meeting-start-date"
+          name="startDate"
+          formControlName="startDate"
+          [showError]="true"
+          [invalid]="invalidControl('startDate')"
+          [errors]="form.get('startDate').errors"
+        ></mui-datepicker>
+      </div>
+    </div>
+  </form>
+  <div class="meeting-form__participants">
+    <div class="mui-input__label">
+      {{'MEETING_FORM.PARTICIPANTS' | translate}}
+    </div>
+    <ng-select 
+      [multiple]="true"
+      [(ngModel)]="newMeetingParticipants">
+      <ng-option
+        *ngFor="let user of selectUsers"
+        [value]="user.id"
+      >{{user.firstName}} {{user.lastName}}</ng-option>
+    </ng-select>
+  </div>
+  <div class="meeting-form__footer">
+    <button 
+      (click)="addMeeting()"
+      [disabled]="formInvalid" 
+      class="btn btn-primary mui-btn meeting-form__button" 
+    >{{'MEETING_FORM.SUBMIT' | translate}}
+    </button>
+  </div>
+</div>

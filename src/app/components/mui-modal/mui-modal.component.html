@@ -1,0 +1,8 @@
+<div *ngIf="showModal" class="mui-modal" [ngClass]="{'mui-modal--visible': isOpen}">
+  <div class="mui-modal__content">
+    <div class="mui-modal__caption">{{caption}}</div>
+    <div class="mui-modal__body">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

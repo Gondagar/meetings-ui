@@ -1,0 +1,22 @@
+@import './fonts';
+@import './bootstrap-utils';
+@import './variables';
+@import './functions';
+@import './bootstrap';
+
+@import "~@fullcalendar/core/main.css";
+@import "~@fullcalendar/daygrid/main.css";
+@import "~ngx-bootstrap/datepicker/bs-datepicker.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import "~angular-notifier/styles.scss";
+
+@import './input';
+@import './button';
+@import './global';
+@import './card';
+
+// components
+@import '../app/components/global-components';
+
+// containers
+@import '../app/containers/global-containers';

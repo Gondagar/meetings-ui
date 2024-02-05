@@ -1,0 +1,9 @@
+@function pxToRem($size) {
+  $remSize: $size / 16px;
+
+  @return #{$remSize}rem;
+}
+
+@function grayShadow() {
+  @return 0 0 20px 1px $gray-300;
+}

@@ -1,0 +1,62 @@
+<h1>{{'REGISTRATION_PAGE.TITLE' | translate}}</h1>
+<form [formGroup]="form" class="mui-authentication-form" (submit)="handleSubmit()">
+  <mui-input [label]="'REGISTRATION_PAGE.EMAIL_LABEL' | translate"
+                [placeHolder]="'REGISTRATION_PAGE.EMAIL_PLACEHOLDER' | translate"
+                id="authentication-email"
+                name="email"
+                formControlName="email"
+                [showError]="true"
+                [invalid]="invalidControl('email')"
+                [errors]="form.get('email').errors"
+  ></mui-input>
+  <mui-input [label]="'REGISTRATION_PAGE.PASSWORD_LABEL' | translate"
+                [placeHolder]="'REGISTRATION_PAGE.PASSWORD_PLACEHOLDER' | translate"
+                id="authentication-password"
+                name="password"
+                type="password"
+                formControlName="password"
+                [showError]="true"
+                [invalid]="invalidControl('password')"
+                [errors]="form.get('password').errors"
+  ></mui-input>
+  <mui-input [label]="'REGISTRATION_PAGE.CONFIRM_PASSWORD_LABEL' | translate"
+                [placeHolder]="'REGISTRATION_PAGE.CONFIRM_PASSWORD_PLACEHOLDER' | translate"
+                id="authentication-confirm-password"
+                name="confirmPassword"
+                type="password"
+                formControlName="confirmPassword"
+                [showError]="true"
+                [invalid]="invalidControl('confirmPassword')"
+                [errors]="form.get('confirmPassword').errors"
+  ></mui-input>
+  <mui-input [label]="'REGISTRATION_PAGE.FIRST_NAME_LABEL' | translate"
+                [placeHolder]="'REGISTRATION_PAGE.FIRST_NAME_PLACEHOLDER' | translate"
+                id="authentication-first-name"
+                name="firstName"
+                type="firstName"
+                formControlName="firstName"
+                [showError]="true"
+                [invalid]="invalidControl('firstName')"
+                [errors]="form.get('firstName').errors"
+  ></mui-input>
+  <mui-input [label]="'REGISTRATION_PAGE.LAST_NAME_LABEL' | translate"
+                [placeHolder]="'REGISTRATION_PAGE.LAST_NAME_PLACEHOLDER' | translate"
+                id="authentication-last-name"
+                name="lastName"
+                type="lastName"
+                formControlName="lastName"
+                [showError]="true"
+                [invalid]="invalidControl('lastName')"
+                [errors]="form.get('lastName').errors"
+  ></mui-input>
+  <mui-checkbox  [label]="'REGISTRATION_PAGE.CONSENTS_LABEL' | translate"
+                id="authentication-consents"
+                name="consents"
+                formControlName="consents"
+                [invalid]="invalidControl('consents')"
+  ></mui-checkbox>
+  <p>{{'REGISTRATION_PAGE.SIGNED_UP.MESSAGE' | translate}} <a [routerLink]="loginFormLink">{{'REGISTRATION_PAGE.SIGNED_UP.LINK' | translate}}</a></p>
+  <div class="mui-authentication-form__footer">
+    <button [disabled]="formInvalid" class="btn btn-primary mui-btn mui-authentication-form__button" type="submit">{{'REGISTRATION_PAGE.SUBMIT' | translate}}</button>
+  </div>
+</form>

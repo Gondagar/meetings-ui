@@ -1,0 +1,12 @@
+.card {
+  overflow: hidden;
+  box-shadow: grayShadow();
+
+  &__header {
+    padding-top: 30px;
+  }
+
+  &__footer {
+    background-color: transparent;
+  }
+}

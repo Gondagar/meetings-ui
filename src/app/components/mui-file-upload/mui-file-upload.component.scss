@@ -1,0 +1,13 @@
+.mui-file-upload {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    display: none;
+  }
+
+  &__image-preview {
+    height: 400px;
+    width: 400px;
+  }
+}

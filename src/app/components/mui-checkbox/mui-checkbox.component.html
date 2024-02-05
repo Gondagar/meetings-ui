@@ -1,0 +1,21 @@
+<div class="mui-input">
+  <label
+    [attr.for]="checkboxId"
+    class="mui-checkbox__label"
+    [attr.invalid]="invalid"
+    [ngClass]="{ 'mui-checkbox--invalid': invalid }"
+  >
+    <div class="mui-checkbox__wrapper">
+      <input
+        type="checkbox"
+        [attr.id]="checkboxId"
+        [name]="name"
+        [checked]="checked"
+        (change)="toggle()"
+        class="mui-checkbox__input"
+      />
+      <span class="mui-checkbox__checkmark"></span>
+    </div>
+    <p class="mui-checkbox__text">{{ label }}</p>
+  </label>
+</div>

@@ -1,0 +1,62 @@
+<div class="meeting-page" *ngIf="hasMeetingData">
+  <div class="meeting__caption">
+    <h1 class="meeting__header">{{title}}</h1>
+    <button *ngIf="isOwner" (click)="handleMeetingDelete()" class="btn btn-danger">{{'MEETING_PAGE.PARTICIPANTS.DELETE' | translate}}</button>
+  </div>
+  <div class="meeting-page__content">
+    <p class="meeting__description">{{description}}</p>
+    <div class="meeting__date-time">
+      <p>{{startDate}}</p>
+      <p>{{startTime}}</p>
+    </div>
+    <hr>
+    <div class="meeting__participants">
+      <h2 *ngIf="!hasNotes">{{'MEETING_PAGE.PARTICIPANTS' | translate}}</h2>
+      <ul class="meeting__participants-list">
+        <li *ngFor="let participant of participants" class="meeting__participants-item">
+          <mui-avatar theme="dark" [data]="participant.userAvatar"></mui-avatar>
+          <span>{{getFullName(participant)}}</span>
+          <button (click)="deleteParticipant(participant)" *ngIf="isOwner && !participant.isOwner" class="btn btn-danger">{{'MEETING_PAGE.PARTICIPANTS.DELETE' | translate}}</button>
+        </li>
+      </ul>
+      <div class="meeting__participants" *ngIf="isOwner">
+        <div class="meeting__participants-form">
+          <ng-select [multiple]="true" [(ngModel)]="newMeetingParticipants" (search)="findUsers($event)">
+            <ng-option *ngFor="let user of selectUsers" [value]="user.id">{{user.firstName}} {{user.lastName}}</ng-option>
+          </ng-select>
+          <button
+            (click)="addParticipant()"
+            class="btn btn-primary mui-btn meeting__note-form-button" 
+            >{{'MEETING_PAGE.PARTICIPANTS_FORM.SUBMIT' | translate}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div *ngIf="hasNotes" class="meeting__notes">
+      <h2>{{'MEETING_PAGE.NOTES' | translate}}</h2>
+      <ul>
+        <li *ngFor="let note of notes" class="meeting__note">
+          <div class="meeting__note-caption">
+            <mui-avatar theme="dark" [data]="note.author.userAvatar"></mui-avatar>
+            <button (click)="deleteNote(note)" class="btn btn-danger">{{'MEETING_PAGE.PARTICIPANTS.DELETE' | translate}}</button>
+          </div>
+          <p class="meeting__note-content">{{note.content}}</p>
+          <p class="meeting__note-creation-time">{{getCreationDate(note)}}</p>
+        </li>
+      </ul>
+    </div>
+    <form class="meeting__note-form" [formGroup]="noteForm" (submit)="addNote()">
+      <textarea formControlName="content" class="form-control" name="" id="" cols="30" rows="10"></textarea>
+      <button
+        [disabled]="formInvalid" 
+        class="btn btn-primary mui-btn meeting__note-form-button" 
+        type="submit">{{'MEETING_PAGE.NOTE_FORM.SUBMIT' | translate}}
+      </button>
+    </form>
+  </div>
+</div>
+<mui-modal [isOpen]="modalVisible" caption="Are You sure?">
+  <button (click)="handleModalConfirmation()" class="btn btn-danger">Yes</button>
+  <button (click)="handleModalRejection()" class="btn btn-outline-primary ml-2">No</button>
+</mui-modal>
